@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK1</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <style>
+        .img1{
+            width: auto;
+            height: 500px;
+            background-image: url(../images/01.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-bottom: 20px;
+        }
+        .active{
+            color: #444;
+        }
+        .deactive{
+            color: #fff;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h3>
+            </h3>
+        </div>
+
+        <div class="content">
+            <div class="section section1">
+                <h3>
+                    1. Create image and button onbutton click hide the image
+                </h3>
+                <div class="image img1" id="img1"></div>
+                <button id="btn1" onclick="$('#img1').fadeToggle(800,'linear')">HIDE/SHOW</button>
+            </div>
+
+            <div class="section section2">
+                <h3>
+                    2. Create a paragraph, write 5 line about you. 
+                    on mouse over hide paragraph and on mouse out show paragraph
+                </h3>
+                <p id="para1">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia facere veritatis distinctio hic illo soluta nam deserunt nesciunt? Obcaecati ipsa accusamus quidem voluptatem qui repellendus necessitatibus sunt, quibusdam sit itaque!
+                Assumenda non explicabo dolorum? Rerum consequuntur, necessitatibus facere animi tempore nisi aspernatur pariatur dignissimos quisquam saepe distinctio magnam dolorum, hic unde voluptate. Aspernatur dolorem cum ut aperiam aut molestias nisi.
+                Nostrum facilis officiis architecto quas laborum libero corporis assumenda cum exercitationem perferendis, nesciunt vitae quia ut sunt corrupti neque fugit aliquid ratione delectus voluptas? Impedit vero laborum earum facilis praesentium.
+                Asperiores reprehenderit quam ipsa eum, corporis pariatur tempora exercitationem doloribus ex aut impedit voluptates cumque, quo harum aliquam ducimus sunt illum totam amet distinctio quaerat id. Ad illum architecto recusandae?
+                Tempora, dolorem odio in labore placeat provident mollitia, veritatis nisi itaque corporis vel. Rem voluptate, voluptatum, iusto harum deserunt, blanditiis vitae reiciendis ullam illo commodi corporis sed. Ab, mollitia officia!
+                Laboriosam, suscipit illum officia sed ea eligendi deleniti veritatis sint quibusdam aspernatur sit nihil tenetur excepturi aut perspiciatis ipsa atque odio eius unde. Voluptatibus tenetur obcaecati at id tempore perspiciatis!
+                Repellendus explicabo quo omnis aliquam perspiciatis exercitationem provident voluptate aut, odit ratione, cum voluptatem nemo! Nesciunt fugit enim inventore vero eos odio et, iusto deleniti porro ea, perspiciatis accusamus delectus?
+                Eaque, dolore quasi officia explicabo vero modi consequuntur. Nihil animi a quo nobis voluptatibus praesentium reprehenderit delectus recusandae assumenda, iure eos adipisci maiores sequi voluptatum saepe, optio, dolorem quisquam necessitatibus?
+                Quam dicta officiis laboriosam doloremque tempore voluptates itaque natus corrupti, expedita maiores cumque, optio ratione, pariatur ut vero. Rem consequuntur adipisci officia eveniet impedit! Odit similique provident nemo accusamus repellendus?
+                Deleniti optio aspernatur ut dolorum nobis eos et nostrum eligendi, repudiandae molestiae, similique ratione unde libero repellat inventore quas! Dolorem inventore minima voluptates molestiae reiciendis earum quisquam cupiditate, dolore quasi.</p>
+            </div>
+
+            <div class="section section3">
+                <h3>
+                    3. Write your name in h1 tag with blue color on mouse enter 
+                    it should display red border around it.
+                </h3>
+                <h1 style="color: blue;" id="name1">VISHAL</h1>
+            </div>
+
+            <div class="section section4">
+                <h3>
+                    4. Create a text box, on blur give grey color to textbox
+                </h3>
+                <input type="text" onblur="$(this).css('background-color','#999')" placeholder="Write anything">
+            </div>
+
+            <div class="section section5">
+                <h3>
+                    5. Create a text box when you type in it the color of text should be green
+                </h3>
+                <input type="text" onkeypress="$(this).css('color','green')" placeholder="WRITE ANYTHING" style="color:  red;">
+            </div>
+        </div>
+    </div>
+    <script>
+        $("#para1").hover(
+            function(){
+                $(this).addClass("deactive").removeClass("active");
+            },function(){
+                $(this).addClass("active").removeClass("deactive");
+            });
+
+        $("#name1").mouseenter(
+            function(){
+                $(this).css("border","1px solid red");
+            }
+        );
+    </script>
+</body>
+</html>
