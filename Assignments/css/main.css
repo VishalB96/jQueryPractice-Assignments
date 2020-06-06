@@ -28,4 +28,12 @@
             /*transition: box-shadow 500ms;*/
             
         }
+        .images{
+            width: auto;
+            height: 500px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-bottom: 20px;
+        }
         
